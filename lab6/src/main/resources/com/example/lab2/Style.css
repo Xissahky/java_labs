@@ -1,0 +1,50 @@
+.but1{
+    -fx-text-fill: #0000FF;
+    -fx-text-alignment: CENTER;
+    -fx-font-size: 12;
+    -fx-background-color: #e4e277;
+}
+.but2{
+    -fx-text-fill: #1ec318;
+    -fx-text-alignment: CENTER;
+    -fx-font-size: 12;
+    -fx-background-color: #b3d7eb;
+}
+.but3{
+    -fx-text-fill: #FF0000;
+    -fx-text-alignment: CENTER;
+    -fx-font-size: 12;
+    -fx-background-color: #92e489;
+}
+.label{
+    -fx-text-fill: #2114d7;
+    -fx-text-alignment: CENTER;
+    -fx-font-size: 12;
+}
+#niebieski{
+    -fx-text-fill: #0000FF;
+    -fx-font-size: 12;
+    -fx-background-color: #e4e277;
+}
+#zielony{
+    -fx-text-fill: #1ec318;
+    -fx-font-size: 12;
+    -fx-background-color: #b3d7eb;
+}
+#czerwony{
+    -fx-text-fill: #FF0000;
+    -fx-font-size: 12;
+    -fx-background-color: #92e489;
+}
+.but1:hover{
+    -fx-background-color: #000000;
+    -fx-font-weight: bold;
+}
+.but2:hover{
+    -fx-background-color: #000000;
+    -fx-font-weight: bold;
+}
+.but3:hover{
+    -fx-background-color: #000000;
+    -fx-font-weight: bold;
+}

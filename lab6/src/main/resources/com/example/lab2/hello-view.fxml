@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="534.0" prefWidth="437.0" spacing="20.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab2.PrimaryController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Nowy" />
+                  <RadioMenuItem mnemonicParsing="false" text="1" />
+                  <RadioMenuItem mnemonicParsing="false" text="2" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <HBox prefHeight="100.0" prefWidth="200.0" spacing="40.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+               <children>
+                  <RadioButton id="niebieski" fx:id="Niebieski" mnemonicParsing="false" onAction="#nieb" stylesheets="@Style.css" text="Niebieski">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="tooglegroup1" />
+                     </toggleGroup> </RadioButton>
+                  <RadioButton id="zielony" fx:id="Zielony" mnemonicParsing="false" onAction="#ziel" stylesheets="@Style.css" text="Zielony" toggleGroup="$tooglegroup1" />
+                  <RadioButton id="czerwony" fx:id="Czerwony" mnemonicParsing="false" onAction="#czer" stylesheets="@Style.css" text="Czerwony" toggleGroup="$tooglegroup1" />
+               </children>
+            </VBox>
+            <VBox prefHeight="123.0" prefWidth="98.0" spacing="20.0">
+               <children>
+                  <RadioButton mnemonicParsing="false" onAction="#but1" text="1">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="tooglegroup2" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton mnemonicParsing="false" onAction="#but2" text="2" toggleGroup="$tooglegroup2" />
+                  <RadioButton mnemonicParsing="false" onAction="#but3" text="3" toggleGroup="$tooglegroup2" />
+                  <Label fx:id="label" prefHeight="17.0" prefWidth="107.0" text="Laboratorium 2" textFill="#2114d7">
+                     <effect>
+                        <Bloom threshold="0.0" />
+                     </effect></Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+               <children>
+                  <CheckBox mnemonicParsing="false" text="CheckBox" />
+                  <CheckBox mnemonicParsing="false" text="CheckBox" />
+                  <CheckBox mnemonicParsing="false" text="CheckBox" />
+               </children>
+            </VBox>
+         </children></HBox>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Tab 1">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+                           <children>
+                              <RadioButton mnemonicParsing="false" onAction="#img1" text="RadioButton">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="tooglegroup3" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton mnemonicParsing="false" onAction="#img2" text="RadioButton" toggleGroup="$tooglegroup3" />
+                              <RadioButton mnemonicParsing="false" onAction="#img3" text="RadioButton" toggleGroup="$tooglegroup3" />
+                           </children>
+                        </VBox>
+                           <ImageView fx:id="img" fitHeight="150.0" fitWidth="200.0" layoutX="192.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Tab 2">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                         <ComboBox fx:id="exit" prefWidth="150.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+                             <items>
+                                 <FXCollections fx:factory="observableArrayList">
+                                     <!-- Other options -->
+                                     <String fx:value="Close Application" />
+                                 </FXCollections>
+                             </items>
+                         </ComboBox>
+                        <Button layoutX="311.0" layoutY="29.0" mnemonicParsing="false" styleClass="but1" stylesheets="@Style.css" text="Button1" />
+                        <Button layoutX="311.0" layoutY="61.0" mnemonicParsing="false" styleClass="but2" stylesheets="@Style.css" text="Button2" textFill="#b3d7eb" />
+                        <Button layoutX="311.0" layoutY="92.0" mnemonicParsing="false" styleClass="but3" stylesheets="@Style.css" text="Button3" textFill="#92e489" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</VBox>
